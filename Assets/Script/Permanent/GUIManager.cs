@@ -7,16 +7,19 @@ namespace Managers
     public class GUIManagerData
     {
         [SerializeField] private GameObject titleUI;
+        [SerializeField] private GameObject waitRoomUI;
         [SerializeField] private GameObject banPickUI;
         [SerializeField] private GameObject playWaitGUI;
         
         public GameObject TitleUI { get => titleUI; private set => titleUI = value; }
+        public GameObject WaitRoomUI { get => waitRoomUI; private set => waitRoomUI = value; }
         public GameObject BanPickUI { get => banPickUI; private set => banPickUI = value; }
         public GameObject PlayWaitGUI { get => playWaitGUI; private set => playWaitGUI = value; }
         
-        public GUIManagerData(GameObject titleUI, GameObject banPickUI, GameObject playWaitGUI)
+        public GUIManagerData(GameObject titleUI, GameObject waitRoomUI, GameObject banPickUI, GameObject playWaitGUI)
         {
             TitleUI = titleUI;
+            WaitRoomUI = waitRoomUI;
             BanPickUI = banPickUI;
             PlayWaitGUI = playWaitGUI;
         }
@@ -41,6 +44,18 @@ namespace Managers
             data.PlayWaitGUI.SetActive(false);
             
             IsInitialized = true;
+        }
+
+        public void EnterWaitRoom()
+        {
+            data.WaitRoomUI.SetActive(true);
+            data.TitleUI.SetActive(false);
+        }
+
+        public void EnterBanPick()
+        {
+            data.BanPickUI.SetActive(true);
+            data.WaitRoomUI.SetActive(false);
         }
     }
 }

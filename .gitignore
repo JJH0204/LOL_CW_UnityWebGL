@@ -98,3 +98,10 @@ InitTestScene*.unity*
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 .DS_Store
+.idea/.idea.LOL_CW_UnityWebGL/.idea/copilot.data.migration.agent.xml
+.idea/.idea.LOL_CW_UnityWebGL/.idea/copilot.data.migration.ask2agent.xml
+.idea/.idea.LOL_CW_UnityWebGL/.idea/encodings.xml
+.idea/.idea.LOL_CW_UnityWebGL/.idea/indexLayout.xml
+.idea/.idea.LOL_CW_UnityWebGL/.idea/misc.xml
+.idea/.idea.LOL_CW_UnityWebGL/.idea/vcs.xml
+*.xml
